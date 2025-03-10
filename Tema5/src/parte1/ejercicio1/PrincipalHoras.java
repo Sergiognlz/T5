@@ -33,17 +33,17 @@ public class PrincipalHoras {
 			case 1->{
 				//llamamos a la función inc() del objeto h
 				h.inc();
-			}
-			//caso 2: inc segudos
-			case 2->{
-				//llamamos a la función in() del objeto hE
-				hE.inc();
+			
+		
 			}
 			//caso 0: salir
 			case 0->{
 				System.out.println("Saliendo del Progama");
 			}
 			
+			default->{
+				System.out.println("La opción introducida no existe");
+			}
 			}
 			
 			
@@ -121,8 +121,8 @@ public static void mostrarMenu(HoraExacta objeto) {
 	System.out.println(objeto);
 	System.out.println();
 	System.out.println("Menú:");
-	System.out.println("1. Incrementar minutos");
-	System.out.println("2. Incrementar segundos");
+	System.out.println("1. Incrementar segundos");
+
 	System.out.println("0. Salir");
 	System.out.println();
 
