@@ -13,8 +13,9 @@ public class Producto {
 	 * @param nombre
 	 */
 	public Producto(String nombre) {
-
+		if(nombre!=null&&!nombre.isBlank()) {
 		this.nombre = nombre;
+		}
 	}
 
 	/**
@@ -24,9 +25,9 @@ public class Producto {
 	 * @param precio
 	 */
 	public Producto(String nombre, double precio) {
-
+		if(nombre!=null&&!nombre.isBlank()) {
 		this.nombre = nombre;
-		
+		}
 		if (precio > 0) {
 			Precio = precio;
 		}
@@ -44,7 +45,9 @@ public class Producto {
 	 * @param nombre
 	 */
 	public void setNombre(String nombre) {
+		if(nombre!=null&&!nombre.isBlank()) {
 		this.nombre = nombre;
+		}
 	}
 	
 	/**

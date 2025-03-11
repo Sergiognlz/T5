@@ -32,7 +32,7 @@ public class PrincipalHoras {
 			//caso 1: inc minutos
 			case 1->{
 				//llamamos a la función inc() del objeto h
-				h.inc();
+				hE.inc();
 			
 		
 			}
@@ -122,7 +122,6 @@ public static void mostrarMenu(HoraExacta objeto) {
 	System.out.println();
 	System.out.println("Menú:");
 	System.out.println("1. Incrementar segundos");
-
 	System.out.println("0. Salir");
 	System.out.println();
 

@@ -13,7 +13,9 @@ public class NoPerecedero extends Producto{
 	 */
 	public NoPerecedero(String nombre, double precio, String tipo) {
 		super(nombre, precio);
+		if(tipo!=null&&!tipo.isBlank()) {
 		this.tipo=tipo;
+		}
 		
 	}
 
@@ -30,7 +32,9 @@ public class NoPerecedero extends Producto{
 	 * @param tipo
 	 */
 	public void setTipo(String tipo) {
+		if(tipo!=null&&!tipo.isBlank()) {
 		this.tipo = tipo;
+		}
 	}
 	
 	/**
