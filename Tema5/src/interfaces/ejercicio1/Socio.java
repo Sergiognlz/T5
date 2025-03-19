@@ -3,7 +3,7 @@ package interfaces.ejercicio1;
 /**
  * Clase socio
  */
-public class Socio implements Comparable {
+public class Socio implements Comparable<Socio> {
 
 	/**
 	 * número id socio
@@ -46,11 +46,11 @@ public class Socio implements Comparable {
 	 *         llamamos, negativo si es menor o 0 si son iguales
 	 */
 	@Override
-	public int compareTo(Object o) {
+	public int compareTo(Socio o) {
 		// guardamos el obejto en un objeto de tipo socio y casteamos a socio
-		Socio s = (Socio) o;
+	
 		// devolvemos la diferencia entre los ids
-		return (this.id - s.id);
+		return (this.id - o.id);
 	}
 
 	
