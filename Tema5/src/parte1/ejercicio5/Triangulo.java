@@ -125,11 +125,12 @@ public class Triangulo extends Poligono {
 	@Override
 	public String toString() {
 		// cadena
-		String cadena = getClass() + "\n";
+		String cadena = getClass().getName() + "\n";
 		cadena += "Lado1: " + getLado1() + "\n";
 		cadena += "Lado2: " + getLado2() + "\n";
 		cadena += "Lado3: " + getLado3() + "\n";
-
+		cadena+="Área: "+this.area()+"\n";
+		
 		return cadena;
 	}
 

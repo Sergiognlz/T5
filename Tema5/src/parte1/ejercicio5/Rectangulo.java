@@ -95,10 +95,10 @@ package parte1.ejercicio5;
 		@Override
 		public String toString() {
 			//cadena
-			String cadena=getClass()+"\n";
+			String cadena=getClass().getName()+"\n";
 			cadena+="Lado1: "+getLado1()+"\n";
 			cadena+="Lado2: "+getLado2()+"\n";
-
+			cadena+="Área: "+this.area()+"\n";
 			
 			return cadena;
 		}
