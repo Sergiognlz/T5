@@ -1,0 +1,32 @@
+Animal <<Interface>>
+	+ void comer();
+	+ void dormir();
+	+ boolean hacerRuido();
+	
+abstract AnimalDomestico implements Animal
+	- String nombre;
+	- String raza;
+	- double peso;
+	- String color;
+	
+	+ void vacunar();
+	+ abstract boolean hacerCaso();
+	
+	heredados:
+		+ abstract void hacerRuido
+		+ void dormir();
+		+ void comer();
+		
+Perro extends AnimalDomestico
+	+ void sacarPaseo();
+	
+	heredados: 
+		+ boolean hacerCaso();
+		+ void hacerRuido();
+
+Gato extends AnimalDomestico
+	+ void toserBolaPelo
+	
+	heredados: 
+		+ boolean hacerCaso();
+		+ void hacerRuido();
