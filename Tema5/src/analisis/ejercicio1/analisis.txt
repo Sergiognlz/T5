@@ -1,0 +1,41 @@
+abstract Vehículo
+	- String marca
+	- String modelo
+	- String matrícula
+	- boolean motorEncendido
+	- int marchaActual
+	- int velocidadActual
+	---------------------------------------
+	
+	+ constructor Vehículo(marca,modelo,matrícula,motorEncendido,marchaActual,velocidadActual)
+	
+	
+	+ void parar()
+	+ void arrancar()
+	+ void subirMarcha()
+	+ void bajarMarcha()
+	
+	
+	Turismo extends Vehículo
+	
+	- int númeroPlaza
+	- enum Uso {PROFESIONAL,PARTICULAR}
+	
+	
+	
+	
+	Camión extends Vehículo
+	
+	- double pesoMax
+	- boolean peligro
+	
+	
+	
+	Motocicleta extends Vehículo
+	
+	- int cc
+	
+	+ boolean carnet(cc)
+	
+	
+	
