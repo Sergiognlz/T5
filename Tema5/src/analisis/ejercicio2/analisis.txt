@@ -1,0 +1,50 @@
+abstract Ficha
+
+	- int num;
+	- String titulo;
+	
+	+ constructor Ficha(int num, String ficha);
+	
+	+ void prestar();
+	
+Libro extends Ficha
+
+	- String autor;
+	- String editorial;
+	
+	+ constructor Libro(int num, String ficha, String autor, String editorial); 
+	
+Heredados:
+	- int num;
+	- String ficha;
+
+	+ void prestar();
+	
+Revista extends Ficha
+
+	- int numRevista;
+	- int añoPublicacion;
+
++ constructor Ficha(int num, String ficha, int numRevista, int añoPublicacion);
+
+Heredados:
+	- int num;
+	- String ficha;
+	
+	+ void prestar();
+	
+DVD extends Ficha
+
+	enum Tipo{PELICULA, DOCUMENTAL, SERIE};
+
+	- String director;
+	- String año;
+	- Tipo tipo;
+
++ constructor Ficha(int num, String ficha);
+
+Heredados:
+	- int num;
+	- String ficha;
+	
+	+ void prestar();

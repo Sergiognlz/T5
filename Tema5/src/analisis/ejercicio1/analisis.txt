@@ -26,6 +26,19 @@
 	
 	+ constructor Turismo(marca, modelo, matrícula, numPlazas, uso)
 	
+	Heredados:
+	- String marca
+	- String modelo
+	- String matrícula
+	- boolean motorEncendido
+	- int marchaActual
+	- int velocidadActual
+	-----------------------
+	+ void parar()
+	+ void arrancar()
+	+ void subirMarcha()
+	+ void bajarMarcha()
+	
 	
 	Camión extends Vehículo
 	
@@ -33,6 +46,19 @@
 	- boolean mercanciaPeligrosa
 	
 	+ constructor Camión(marca, modelo, matrícula, pesoMax, MercanciaPeligrosa)
+	
+	Heredados:
+	- String marca
+	- String modelo
+	- String matrícula
+	- boolean motorEncendido
+	- int marchaActual
+	- int velocidadActual
+	-----------------------
+	+ void parar()
+	+ void arrancar()
+	+ void subirMarcha()
+	+ void bajarMarcha()
 	
 	Motocicleta extends Vehículo
 	
@@ -43,5 +69,17 @@
 	-----------------------
 	+ boolean carnet()
 	
+	Heredados:
+	- String marca
+	- String modelo
+	- String matrícula
+	- boolean motorEncendido
+	- int marchaActual
+	- int velocidadActual
+	-----------------------
+	+ void parar()
+	+ void arrancar()
+	+ void subirMarcha()
+	+ void bajarMarcha()
 	
 	
