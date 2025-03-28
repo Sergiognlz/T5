@@ -1,4 +1,4 @@
-abstract Vehículo
+ Vehículo
 	- String marca
 	- String modelo
 	- String matrícula
@@ -7,7 +7,7 @@ abstract Vehículo
 	- int velocidadActual
 	---------------------------------------
 	
-	+ constructor Vehículo(marca,modelo,matrícula,motorEncendido,marchaActual,velocidadActual)
+	+ constructor Vehículo(marca,modelo,matrícula)
 	
 	
 	+ void parar()
@@ -15,27 +15,33 @@ abstract Vehículo
 	+ void subirMarcha()
 	+ void bajarMarcha()
 	
+	+ void acelerar(int velocidad)
+	+ void frenar(int velocidad)
 	
 	Turismo extends Vehículo
+	enum TipoUso {PROFESIONAL,PARTICULAR}
 	
 	- int númeroPlaza
-	- enum Uso {PROFESIONAL,PARTICULAR}
+	- tipoUso uso{PROFESIONAL,PARTICULAR}
 	
-	
+	+ constructor Turismo(marca, modelo, matrícula, numPlazas, uso)
 	
 	
 	Camión extends Vehículo
 	
 	- double pesoMax
-	- boolean peligro
+	- boolean mercanciaPeligrosa
 	
-	
+	+ constructor Camión(marca, modelo, matrícula, pesoMax, MercanciaPeligrosa)
 	
 	Motocicleta extends Vehículo
 	
 	- int cc
 	
-	+ boolean carnet(cc)
+	
+	+ constructor Motocicleta(marca, modelo, matrícula, )
+	-----------------------
+	+ boolean carnet()
 	
 	
 	

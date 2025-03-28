@@ -3,7 +3,7 @@ package analisis.ejercicio1;
 /**
  * Clase vehículo con sus datos
  */
-public abstract class Vehiculo {
+public class Vehiculo {
 	/**
 	 * atributo privado marca
 	 */
@@ -11,6 +11,11 @@ public abstract class Vehiculo {
 	/**
 	 * atributo privado modelo
 	 */
+	/**
+	 * atributo privado color
+	 */
+	private String color;
+
 	private String modelo;
 	/**
 	 * atributo privado matrícula
@@ -36,7 +41,7 @@ public abstract class Vehiculo {
 	 * @param modelo
 	 * @param matricula
 	 */
-	public Vehiculo(String marca, String modelo, String matricula) {
+	public Vehiculo(String marca, String modelo, String color, String matricula) {
 
 		if (marca != null && !marca.isBlank()) {
 			this.marca = marca;
@@ -44,6 +49,10 @@ public abstract class Vehiculo {
 		if (modelo != null && !modelo.isBlank()) {
 			this.modelo = modelo;
 		}
+		if (color != null && !color.isBlank()) {
+			this.color = color;
+		}
+
 		if (matricula != null && !matricula.isBlank()) {
 			this.matricula = matricula;
 		}
@@ -56,8 +65,7 @@ public abstract class Vehiculo {
 	 */
 	public void parar() {
 		this.mortorEcendido = false;
-		this.velocidadActual = 0;
-		this.marchaActual = 0;
+		System.out.println("Motor apagado");
 	}
 
 	/**
@@ -66,8 +74,9 @@ public abstract class Vehiculo {
 	 */
 	public void arrancar() {
 		this.mortorEcendido = true;
-		this.velocidadActual = 1;
-		this.marchaActual = 1;
+		
+		System.out.println("Motor en marcha");
+
 	}
 
 	/**
@@ -76,17 +85,6 @@ public abstract class Vehiculo {
 	public void subirMarcha() {
 		if (this.marchaActual < 5) {
 			this.marchaActual++;
-			switch(this.marchaActual) {
-			case 1->{
-				this.velocidadActual=1;
-			}
-			case 2->{
-				this.velocidadActual=30;
-			}
-			case 3->{
-				
-			}
-			}
 
 		} else {
 			System.out.println("Ya estás en la marcha máxima del vehículo");
@@ -101,7 +99,7 @@ public abstract class Vehiculo {
 			this.marchaActual--;
 
 		} else {
-			parar();
+			
 			System.out.println("La marcha actual es la 0");
 		}
 	}
@@ -111,23 +109,90 @@ public abstract class Vehiculo {
 	 * 
 	 * @param velocidad
 	 */
-	public void modVelocidad(int velocidad) {
-		if (velocidad > 0) {
-			this.velocidadActual = velocidad;
-			if (velocidad > 0 && velocidad <= 30) {
-				this.marchaActual = 1;
-			} else if (velocidad > 30 && velocidad <= 50) {
-				this.marchaActual = 2;
-			} else if (velocidad > 50 && velocidad <= 70) {
-				this.marchaActual = 3;
-			} else if (velocidad > 70 && velocidad <= 100) {
-				this.marchaActual = 4;
-			} else {
-				this.marchaActual = 5;
+	public void acelerar(int velocidad) {
+
+		if (this.mortorEcendido && this.velocidadActual < velocidad) {
+
+			while (this.velocidadActual < velocidad) {
+
+				System.out.println(this.velocidadActual + " k/h");
+
+				if (this.velocidadActual >= 0 && this.velocidadActual <= 30 && this.marchaActual != 1) {
+
+					subirMarcha();
+					System.out.println("Marcha " + this.marchaActual);
+
+				} else if (this.velocidadActual > 30 && this.velocidadActual <= 50 && this.marchaActual != 2) {
+
+					subirMarcha();
+					System.out.println("Marcha " + this.marchaActual);
+
+				} else if (this.velocidadActual > 50 && this.velocidadActual <= 70 && this.marchaActual != 3) {
+
+					subirMarcha();
+					System.out.println("Marcha " + this.marchaActual);
+
+				} else if (this.velocidadActual > 70 && this.velocidadActual <= 100 && this.marchaActual != 4) {
+
+					subirMarcha();
+					System.out.println("Marcha " + this.marchaActual);
+
+				} else if (this.velocidadActual > 100 && this.marchaActual != 5) {
+
+					subirMarcha();
+					System.out.println("Marcha " + this.marchaActual);
+				}
+				this.velocidadActual++;
 			}
-		}else {
-			parar();
+
+		} else {
+			System.out.println("No se puede realizar la opción");
 		}
 	}
 
+	/**
+	 * método que recibe una velocidad y devuelve la marcha a la que se encuentra;
+	 * 
+	 * @param velocidad
+	 */
+	public void desacelerar(int velocidad) {
+
+		if (this.mortorEcendido && this.velocidadActual > velocidad) {
+
+			while (this.velocidadActual >= velocidad) {
+
+				System.out.println(this.velocidadActual + " k/h");
+
+				if (this.velocidadActual >= 0 && this.velocidadActual <= 30 && this.marchaActual != 1) {
+
+					bajarMarcha();
+					System.out.println("Marcha "+this.marchaActual);
+
+				} else if (this.velocidadActual > 30 && this.velocidadActual <= 50 && this.marchaActual != 2) {
+
+					bajarMarcha();
+					System.out.println("Marcha "+this.marchaActual);
+
+				} else if (this.velocidadActual > 50 && this.velocidadActual <= 70 && this.marchaActual != 3) {
+
+					bajarMarcha();
+					System.out.println("Marcha "+this.marchaActual);
+
+				} else if (this.velocidadActual > 70 && this.velocidadActual <= 100 && this.marchaActual != 4) {
+
+					bajarMarcha();
+					System.out.println("Marcha "+this.marchaActual);
+
+				} else if (this.velocidadActual > 100 && this.marchaActual != 5) {
+
+					bajarMarcha();
+					System.out.println("Marcha "+this.marchaActual);
+				}
+				this.velocidadActual--;
+			}
+
+		} else {
+			System.out.println("No se puede realizar la opción");
+		}
+	}
 }

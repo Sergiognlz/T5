@@ -4,7 +4,7 @@ public class Turismo extends Vehiculo {
 	/**
 	 * enumerado de tipo Uso
 	 */
-	enum Uso{PROFESIONAL,PARTICULAR}
+	enum TipoUso{PROFESIONAL,PARTICULAR}
 	/**
 	 * atributo privado número de plazas
 	 */
@@ -12,13 +12,17 @@ public class Turismo extends Vehiculo {
 /**
  * atributo privado uso del vehículo
  */
-	private Uso uso;
-public Turismo(String marca, String modelo, String matricula, int numPlazas, Uso uso) {
-	super(marca, modelo, matricula);
+	private TipoUso uso;
+public Turismo(String marca, String modelo,String color, String matricula, int numPlazas, String uso) {
+	super(marca, modelo,color, matricula);
 	if(numPlazas>1) {
 	this.numPlazas = numPlazas;
 	}
-	this.uso = uso;
+	switch(uso) {
+	case "PARTICULAR", "PROFESIONAL"->{
+	this.uso = TipoUso.valueOf(uso);
+	}
+	}
 }
 	
 	
