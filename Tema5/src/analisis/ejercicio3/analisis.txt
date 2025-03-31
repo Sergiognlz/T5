@@ -1,0 +1,76 @@
+Clase CuentaBancaria
+
+	- String numeroCuenta
+	- double saldo
+	- Set<Titular> titulares=new TreeSet<>()
+	
+	+ constructor CuentaBancaria(String numeroCuenta, double saldo, TreeSet titulares)
+	
+	
+	Métodos: 
+	
+	+ boolean ingresar(double dinero) 
+	+ boolean retirar (double dinero)
+	+ boolean añadirTitular(Titular titular)
+	+ boolean eliminarTitular(Titular titular)
+	
+	
+Clase Titular 
+ 
+	- String dni
+	- String nombre
+	- String apellidos
+	- int telefono
+	
+	+constructor Titular(String dni, String nombre, String apellidos, int telefono)
+	
+	
+Clase CuentaAhorro extends CuentaBancaria
+
+	- double cuotaMantenimiento
+	- double interesAnual
+	
+	Métodos:
+	
+	+ double aplicarInteres()
+	+ void aplicarMantenimiento()
+	
+	Métodos heredados:
+	
+	+ boolean ingresar(double dinero) 
+	+ boolean retirar (double dinero)
+	+ boolean añadirTitular(Titular titular)
+	+ boolean eliminarTitular(Titular titular)
+	
+	
+Clase CuentaCorriente extends CuentaBancaria
+
+ - static double porcentajeCobrado
+ - List<Transaccion>transaciones=new ArrayList<>()
+ 
+ 
+ + constructor CuentaCorriente(double porcentajeCobrado)
+ 
+ Métodos:
+ 
+ 	+ boolean agregarTransaccion(Transcaccion trans)
+ 
+ 
+ Métodos heredados:
+	
+	+ boolean ingresar(double dinero) 
+	+ boolean retirar (double dinero)
+	+ boolean añadirTitular(Titular titular)
+	+ boolean eliminarTitular(Titular titular)
+ 
+ 
+Clase Transacción 
+
+	- int dia
+	- int mes
+	- int año
+	- String concepto
+	- double importe
+
+	constructor Transaccion(int dia, int mes, int año, String concepto, double importe)
+	
