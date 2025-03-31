@@ -14,6 +14,7 @@ Clase CuentaBancaria
 	+ boolean añadirTitular(Titular titular)
 	+ boolean eliminarTitular(Titular titular)
 	
+	+ boolean equals(objeto obj)
 	
 Clase Titular 
  
@@ -42,6 +43,7 @@ Clase CuentaAhorro extends CuentaBancaria
 	+ boolean añadirTitular(Titular titular)
 	+ boolean eliminarTitular(Titular titular)
 	
+	+ boolean equals(objeto obj)
 	
 Clase CuentaCorriente extends CuentaBancaria
 
@@ -63,6 +65,7 @@ Clase CuentaCorriente extends CuentaBancaria
 	+ boolean añadirTitular(Titular titular)
 	+ boolean eliminarTitular(Titular titular)
  
+	+ boolean equals(objeto obj)
  
 Clase Transacción 
 
@@ -72,5 +75,5 @@ Clase Transacción
 	- String concepto
 	- double importe
 
-	constructor Transaccion(int dia, int mes, int año, String concepto, double importe)
+	+ constructor Transaccion(int dia, int mes, int año, String concepto, double importe)
 	
