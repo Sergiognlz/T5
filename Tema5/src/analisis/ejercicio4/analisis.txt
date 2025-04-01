@@ -1,0 +1,27 @@
+Clase Contacto
+
+	- String nombre
+	- String telefono
+	
+	+ constructor Contacto(String nombre, String telefono)
+	
+	+ boolean equals(objeto obj)
+	
+Clase Persona extends Contacto
+
+	- String cumpleaños
+	
+	+ constructor Persona(String nombre, String telefono, String cumpleaños)
+	
+	métodos heredados:
+	+ boolean equals(objeto obj)
+	
+Clase Empresa extends Contacto
+
+	- String web
+	
+	+ constructor Empresa(String nombre, String telefono, String web)
+	
+	métodos heredados:
+	+ boolean equals(objeto obj)
+	
