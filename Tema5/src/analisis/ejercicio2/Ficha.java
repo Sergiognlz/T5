@@ -3,7 +3,7 @@ package analisis.ejercicio2;
 /**
  * clase abstracta Ficha
  */
-public abstract class Ficha {
+public abstract class Ficha implements Comparable<Ficha> {
 
 	/**
 	 * atributo privado número
@@ -17,7 +17,8 @@ public abstract class Ficha {
 
 	/**
 	 * Constructor ficha
-	 * @param num ficha
+	 * 
+	 * @param num    ficha
 	 * @param titulo ficha
 	 */
 	public Ficha(int num, String titulo) {
@@ -29,12 +30,38 @@ public abstract class Ficha {
 		}
 	}
 
+	
+	
+	public int getNum() {
+		return num;
+	}
+
+
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+
+
 	/**
 	 * función abstracta prestar
 	 */
 	public abstract void prestar();
+
+	@Override
+	public int compareTo(Ficha o) {
+		int res=this.num-o.num;
 		
-	
-	
+		
+		return res;
+	}
+
+	@Override
+	public String toString() {
+		String cadena=this.num+" "+this.titulo;
+		
+		return cadena;
+	}
 	
 }

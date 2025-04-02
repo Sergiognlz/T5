@@ -40,6 +40,29 @@ public class Socio implements Comparable<Socio> {
 	}
 
 	/**
+	 * muestra id
+	 * @return id
+	 */
+	public int getId() {
+		return id;
+	}
+
+/**
+ * muestra nombre
+ * @return
+ */
+	public String getNombre() {
+		return nombre;
+	}
+/**
+ * muestra edad
+ * @return edad
+ */
+	public int getEdad() {
+		return edad;
+	}
+
+	/**
 	 * Sobreescritura del método compareTo
 	 * 
 	 * @return un número positivo si es mayor el id del objeto desde el que

@@ -1,6 +1,7 @@
 package interfaces.ejercicio1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -19,7 +20,9 @@ public static void main(String[] args) {
 	conjuntoSocios.add(s2);
 	conjuntoSocios.add(s1);
 	
-	Collections.sort(conjuntoSocios);
+	Collections.sort(conjuntoSocios, new ComparaNombres());
+	
+	
 	
 	for(Socio so:conjuntoSocios) {
 		
@@ -27,6 +30,15 @@ public static void main(String[] args) {
 		System.out.println("--------------------------");
 		
 	}
+	Collections.sort(conjuntoSocios, new ComparaEdades());
 	
+	System.out.println("----------------------------------------------------------------------------------------------------------");
+	
+	for(Socio so:conjuntoSocios) {
+		
+		System.out.println(so);
+		System.out.println("--------------------------");
+		
+	}
 }
 }

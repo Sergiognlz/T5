@@ -60,6 +60,38 @@ public class Futbolista implements Comparable<Futbolista> {
 		}
 	}
 
+	
+	
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int getNumCamiseta() {
+		return numCamiseta;
+	}
+/**
+ * 
+ * @return
+ */
+	public String getNombre() {
+		return nombre;
+	}
+/**
+ * 
+ * @return
+ */
+	public int getEdad() {
+		return edad;
+	}
+/**
+ * 
+ * @return
+ */
+	public int getNumGoles() {
+		return numGoles;
+	}
+
 	@Override
 	public int compareTo(Futbolista obj) {
 		// variable respuesta igual al número de la camiseta del objeto menos el número

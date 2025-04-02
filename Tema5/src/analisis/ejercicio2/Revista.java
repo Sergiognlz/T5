@@ -40,4 +40,9 @@ public class Revista extends Ficha {
 		System.out.println("Tiempo de préstamo: 10 días");
 	}
 	
+	@Override
+	public String toString() {
+		
+		return super.toString()+" "+this.numRevista+" "+this.añoPublicacion;
+	}
 }

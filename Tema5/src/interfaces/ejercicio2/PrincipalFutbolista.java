@@ -20,13 +20,26 @@ public class PrincipalFutbolista {
 		listaFutbolistas.add(fut3);
 		listaFutbolistas.add(fut4);
 		listaFutbolistas.add(fut5);
+		
 		//ordenamos lista
-		Collections.sort(listaFutbolistas);
+		Collections.sort(listaFutbolistas, new ComparaEdades());
 		//recorremos la lista con un for each
 		for(Futbolista fut:listaFutbolistas) {
 			//imprimimos futbolistas
 			System.out.println(fut);
 			System.out.println();
 		}
+		
+		System.out.println();
+		//ordenamos lista
+		Collections.sort(listaFutbolistas, new ComparaGoles());
+		//recorremos la lista con un for each
+		for(Futbolista fut:listaFutbolistas) {
+			//imprimimos futbolistas
+			System.out.println(fut);
+			System.out.println();
+		}
+		
+		
 	}
 }

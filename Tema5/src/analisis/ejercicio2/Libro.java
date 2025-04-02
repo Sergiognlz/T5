@@ -41,4 +41,10 @@ public class Libro extends Ficha {
 		System.out.println("Tiempo de préstamo: 15 días");
 	}
 
+	@Override
+	public String toString() {
+		
+		return super.toString()+" "+this.autor+" "+this.editorial;
+	}
+	
 }

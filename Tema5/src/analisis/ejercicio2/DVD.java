@@ -57,4 +57,10 @@ public class DVD extends Ficha {
 	public void prestar() {
 		System.out.println("Tiempo de préstamo: 5 días");
 	}
+	
+	@Override
+	public String toString() {
+		
+		return super.toString()+" "+this.director+" "+this.año;
+	}
 }
