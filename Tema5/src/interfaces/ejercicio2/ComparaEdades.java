@@ -15,7 +15,7 @@ public class ComparaEdades implements Comparator<Futbolista> {
 	@Override
 	public int compare(Futbolista o1, Futbolista o2) {
 		
-		int res=o1.getEdad()-o2.getEdad();
+		int res=o1.getEdad()-o2.getEdad(); //comparación de forma ascendente 
 		
 		return res;
 	}

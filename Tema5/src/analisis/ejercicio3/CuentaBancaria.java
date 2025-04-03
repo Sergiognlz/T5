@@ -1,12 +1,13 @@
 package analisis.ejercicio3;
 
+import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
 /**
  * clase cuenta bancaria
  */
-public class CuentaBancaria {
+public class CuentaBancaria{
 	/**
 	 * atributo privado numero de cuenta
 	 */
