@@ -1,0 +1,79 @@
+Class abstract MandoDistancia 
+	
+	- String modelo
+	- double anchura
+	- double precio
+	- boolean encendido=false
+	---------------------------------------------
+	+ constructor MandoDistancia(String modelo)
+	+ constructor MandoDistancia(String modelo, double anchura, double precio)
+	
+	+ void encenderMando()
+	+ void apagarMando()
+	
+Class MandoTelevision extends MandoDistancia implements Volumen
+	
+	- int volumen
+	- int canal
+	-------------------------------------------
+	+ constructor MandoTelevision(String modelo, double anchura, double precio, int volumen, int canal)
+	
+	Métodos heredados:
+	
+	+ void encenderMando()
+	+ void apagarMando()
+	+ void subirVolumen()
+	+ void bajarVolumen()
+	
+Class MandoMinicadena extends MandoDistancia implements Volumen	
+
+	- void volumen;
+----------------------------------------------------------------
++ constructor MandoMinicadena(String modelo, double anchura, double precio, int volumen, int canal)	
+	
+Métodos heredados:
+	
+	+ void encenderMando()
+	+ void apagarMando()
+	+ void subirVolumen()
+	+ void bajarVolumen()
+	
+Class MandoAspiradora extends MandoDistancia
+	 
+	 - int velocidad=0	
+-------------------------------------------------
+	+ constructor MandoMinicadena(String modelo, double anchura, double precio, int velocidad)		
+
+Métodos heredados:
+	
+	+ void encenderMando()
+	+ void apagarMando()
+	
+	
+Class MandoAireAcondicionado extends MandoDistancia
+
+enum Modo={FRIO,CALOR}
+
+	- Modo modo=FRIO
+	- int temperatura=24
+	- int velocidad=0
+
+Métodos heredados:
+	
+	+ void encenderMando()
+	+ void apagarMando()
+
+	
+Interface Volumen
+	
+	+ void subirVolumen()
+	+ void bajarVolumen()
+	
+Interface Velocidad
+
+	+ void subirVolumen()
+	+ void bajarVolumen()
+	
+
+
+		
