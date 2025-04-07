@@ -11,6 +11,10 @@ Class abstract MandoDistancia
 	+ void encenderMando()
 	+ void apagarMando()
 	
+	+ boolean equals()
+	+ String toString()
+	+ int compareTo(MandoDistancia o)
+	
 Class MandoTelevision extends MandoDistancia implements Volumen
 	
 	- int volumen
@@ -24,6 +28,9 @@ Class MandoTelevision extends MandoDistancia implements Volumen
 	+ void apagarMando()
 	+ void subirVolumen()
 	+ void bajarVolumen()
+	+ boolean equals()
+	+ String toString()
+	+ int compareTo(MandoDistancia o)
 	
 Class MandoMinicadena extends MandoDistancia implements Volumen	
 
@@ -37,6 +44,9 @@ Métodos heredados:
 	+ void apagarMando()
 	+ void subirVolumen()
 	+ void bajarVolumen()
+	+ boolean equals()
+	+ String toString()
+	+ int compareTo(MandoDistancia o)
 	
 Class MandoAspiradora extends MandoDistancia
 	 
@@ -48,6 +58,9 @@ Métodos heredados:
 	
 	+ void encenderMando()
 	+ void apagarMando()
+	+ boolean equals()
+	+ String toString()
+	+ int compareTo(MandoDistancia o)
 	
 	
 Class MandoAireAcondicionado extends MandoDistancia
@@ -62,6 +75,9 @@ Métodos heredados:
 	
 	+ void encenderMando()
 	+ void apagarMando()
+	+ boolean equals()
+	+ String toString()
+	+ int compareTo(MandoDistancia o)
 
 	
 Interface Volumen
