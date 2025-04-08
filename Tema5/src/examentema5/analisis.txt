@@ -1,11 +1,11 @@
-Class abstract MandoDistancia 
+Class abstract MandoDistancia implements Comparable<MandoDistancia>
 	
 	- String modelo
 	- double anchura
 	- double precio
 	- boolean encendido=false
 	---------------------------------------------
-	+ constructor MandoDistancia(String modelo)
+
 	+ constructor MandoDistancia(String modelo, double anchura, double precio)
 	
 	+ void encenderMando()
