@@ -4,6 +4,9 @@ Class abstract MandoDistancia implements Comparable<MandoDistancia>
 	- double anchura
 	- double precio
 	- boolean encendido=false
+	
+	# (esto se pone para los atributos protecteds) y se usa cuando vamos a usar y modificar mucho ese atributo).
+	
 	---------------------------------------------
 
 	+ constructor MandoDistancia(String modelo, double anchura, double precio)
