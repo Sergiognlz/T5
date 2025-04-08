@@ -25,48 +25,53 @@ Class MandoTelevision extends MandoDistancia implements Volumen
 	-------------------------------------------
 	+ constructor MandoTelevision(String modelo, double anchura, double precio, int volumen, int canal)
 	
+	+ int getVolumen()
+	+ void setVolumen()
+	
+	+ void masCanal()
+	+ void menosCanal()
+	
 	Métodos heredados:
 	
-	+ void encenderMando()
-	+ void apagarMando()
+	
 	+ void subirVolumen()
 	+ void bajarVolumen()
-	+ boolean equals()
+	
 	+ String toString()
-	+ int compareTo(MandoDistancia o)
+
 	
 Class MandoMinicadena extends MandoDistancia implements Volumen	
 
 	- void volumen;
 ----------------------------------------------------------------
-+ constructor MandoMinicadena(String modelo, double anchura, double precio, int volumen, int canal)	
++ constructor MandoMinicadena(String modelo, double anchura, double precio, int volumen)	
 	
 Métodos heredados:
 	
-	+ void encenderMando()
-	+ void apagarMando()
 	+ void subirVolumen()
 	+ void bajarVolumen()
-	+ boolean equals()
 	+ String toString()
-	+ int compareTo(MandoDistancia o)
 	
-Class MandoAspiradora extends MandoDistancia
+	
+Class MandoAspiradora extends MandoDistancia implements Velocidad
 	 
 	 - int velocidad=0	
 -------------------------------------------------
-	+ constructor MandoMinicadena(String modelo, double anchura, double precio, int velocidad)		
+	+ constructor MandoMinicadena(String modelo, double anchura, double precio)		
 
 Métodos heredados:
 	
-	+ void encenderMando()
-	+ void apagarMando()
-	+ boolean equals()
+	+ void subirVelocidad()
+	+ void bajarVelocidad()
+	+ void subirTemperatura()
+	+ void bajarTemperatura()
+	+ cambiarModo()
+	
 	+ String toString()
-	+ int compareTo(MandoDistancia o)
 	
 	
-Class MandoAireAcondicionado extends MandoDistancia
+	
+Class MandoAireAcondicionado extends MandoDistancia implements  Velocidad
 
 enum Modo={FRIO,CALOR}
 
@@ -76,11 +81,11 @@ enum Modo={FRIO,CALOR}
 
 Métodos heredados:
 	
-	+ void encenderMando()
-	+ void apagarMando()
-	+ boolean equals()
+	+ void subirVelocidad()
+	+ void bajarVelocidad()
+	
 	+ String toString()
-	+ int compareTo(MandoDistancia o)
+
 
 	
 Interface Volumen
@@ -90,8 +95,8 @@ Interface Volumen
 	
 Interface Velocidad
 
-	+ void subirVolumen()
-	+ void bajarVolumen()
+	+ void subirVelocidad()
+	+ void bajarVelocidad()
 	
 
 
