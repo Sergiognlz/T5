@@ -86,7 +86,9 @@ Métodos heredados:
 	
 	+ String toString()
 
+Class ModeloException extends Exception
 
+Class PrecioNegativoException extends Exception
 	
 Interface Volumen
 	

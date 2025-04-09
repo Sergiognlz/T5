@@ -58,6 +58,36 @@ public class MandoDistancia implements Comparable<MandoDistancia> {
 		}
 
 	}
+	
+	
+	
+	public String getModelo() {
+		return modelo;
+	}
+
+
+
+
+	public double getAnchura() {
+		return anchura;
+	}
+
+
+
+
+	public double getPrecio() {
+		return precio;
+	}
+
+
+
+
+	public boolean isEncendido() {
+		return encendido;
+	}
+
+
+
 
 	/**
 	 * método que modifica el valor de encendido dependiendo de si se encuentra
