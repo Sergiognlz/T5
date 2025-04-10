@@ -9,7 +9,7 @@ public class ComparaGoles implements Comparator<Futbolista> {
 	 */
 	@Override
 	public int compare(Futbolista o1, Futbolista o2) {
-		int res = o1.getNumGoles() - o2.getNumGoles();
+		int res = o2.getNumGoles() - o1.getNumGoles();
 
 		return res;
 	}

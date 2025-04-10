@@ -23,6 +23,9 @@ public class PrincipalNumeros {
 		// ordenamos llamando al método sorte de la clase Arrays y le pasamos la lista y
 		// el objeto ComparaNumeros
 		Arrays.sort(lista, new ComparaNumeros());
+		
+		Arrays.sort(lista, (a,b)->{return b-a;});
+		
 		// imprimimos lista con el método toString de la clase Arrays
 		System.out.println(Arrays.toString(lista));
 

@@ -22,15 +22,11 @@ public static void main(String[] args) {
 	
 	Collections.sort(conjuntoSocios, new ComparaNombres());
 	
+	conjuntoSocios.sort((a,b)->{return a.getNombre().compareTo(b.getNombre());});
 	
-	
-	for(Socio so:conjuntoSocios) {
-		
-		System.out.println(so);
-		System.out.println("--------------------------");
-		
-	}
 	Collections.sort(conjuntoSocios, new ComparaEdades());
+	
+	conjuntoSocios.sort((a,b)->{return b.getEdad()-a.getEdad();});
 	
 	System.out.println("----------------------------------------------------------------------------------------------------------");
 	

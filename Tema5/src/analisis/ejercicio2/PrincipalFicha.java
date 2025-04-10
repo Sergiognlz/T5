@@ -24,8 +24,12 @@ public static void main(String[] args) {
 	
 	System.out.println();
 	
-	//Collections.sort(listaFichas);
+	Collections.sort(listaFichas);
+	
+	
 	Collections.sort(listaFichas, new ComparaTitulos());
+	
+	listaFichas.sort((a, b)->{return a.getTitulo().compareTo(b.getTitulo());});
 	
 	for(Ficha obj:listaFichas) {
 		System.out.println(obj);
